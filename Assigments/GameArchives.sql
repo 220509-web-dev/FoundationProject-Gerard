@@ -17,4 +17,3 @@ primary key (id)
 
 );
 
-/usr/lib/postgresql/14/bin/psql
