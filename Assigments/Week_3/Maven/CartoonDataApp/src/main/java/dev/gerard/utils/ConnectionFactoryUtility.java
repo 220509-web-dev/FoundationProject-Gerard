@@ -19,7 +19,7 @@ public static ConnectionFactoryUtility getInstance() {
 
         public static Connection getConnection() {
                 try {
-                        String dbInfo = "jdbc:postgresql://localhost/Cartoon_DB:5432?user=postgres&password=gman";
+                        String dbInfo = "jdbc:postgresql://localhost/Cartoon_DB?user=postgres&password=gman";
                         Connection connection = DriverManager.getConnection(dbInfo);
                         return connection;
                 } catch (SQLException e) {
