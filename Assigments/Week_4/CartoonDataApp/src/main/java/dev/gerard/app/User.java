@@ -114,11 +114,11 @@ public class User {
         return null;
     }
 
-    public int createUser(User newuser){
+    public int createUser(User user){
 
         //Todo complete this method.
 
-        return newuser.getId();
+        return user.getId();
     }
 
 
