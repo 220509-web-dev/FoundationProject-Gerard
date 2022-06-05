@@ -5,6 +5,11 @@ import java.sql.SQLException;
 
 public class ConnectionFactoryUtility {
 
+        private static final String url = "jdbc:postgresql://localhost:5432/Cartoon_DB";
+        private static final String user = "postgres";
+        private static final String password = "bones";
+
+
         private static ConnectionFactoryUtility instance;
         private ConnectionFactoryUtility(){super();}
 
@@ -18,16 +23,17 @@ public static ConnectionFactoryUtility getInstance() {
 
 
         public static Connection getConnection() {
+                Connection conn = null;
+
                 try {
-                        String dbInfo = "jdbc:postgresql://Root/Cartoon_DB?user=postgres&password=gman";
-                        Connection connection = DriverManager.getConnection(dbInfo);
-                        return connection;
+                        Connection connection = DriverManager.getConnection(url,user,password);
+                        System.out.println("Connection was successful!");
                 } catch (SQLException e) {
-                        e.printStackTrace();
+                        System.out.println(e.getMessage());
                         return null;
                 }
 
-
+                return conn;
         }
 
 }
