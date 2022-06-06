@@ -1,6 +1,6 @@
-dev\gerard\utils\ConnectionFactoryUtility.class
-dev\gerard\utils\ContextLoadListener.class
-dev\gerard\app\User.class
-dev\gerard\servlets\TestServlet.class
-dev\gerard\servlets\UserServlet.class
-dev\gerard\app\ConnectionApp.class
+revature\cartoons\servlets\UserServlet.class
+revature\cartoons\app\ConnectionApp.class
+revature\cartoons\utils\ConnectionFactoryUtility.class
+revature\cartoons\utils\ContextLoadListener.class
+revature\cartoons\app\User.class
+revature\cartoons\servlets\TestServlet.class

@@ -5,21 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ca5e552-c717-48a7-8a2c-690c2d0b3c73" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/gerard/app/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/gerard/app/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/gerard/servlets/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/gerard/servlets/UserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/gerard/utils/ContextLoadListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/gerard/utils/ContextLoadListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/revature/data/app/Cartoon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/revature/data/servlets/CartoonServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Data_Tables/CartoonDataTable.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Data_Tables/Table_design.clip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Miscellaneous/TheWaterFallMethod.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Shell-Scripts/connectToDatabase.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/gerard/app/ConnectionApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/revature/data/app/ConnectionApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/gerard/app/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/revature/data/app/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/gerard/servlets/TestServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/revature/data/servlets/TestServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/gerard/servlets/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/revature/data/servlets/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/gerard/utils/ConnectionFactoryUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/revature/data/utils/ConnectionFactoryUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/gerard/utils/ContextLoadListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/revature/data/utils/ContextLoadListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/CartoonDataApp-VERSION-1.2.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/CartoonDataApp-VERSION-1.2.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CartoonDataApp-VERSION-1.2/WEB-INF/classes/dev/gerard/app/ConnectionApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CartoonDataApp-VERSION-1.2/WEB-INF/classes/dev/gerard/app/ConnectionApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CartoonDataApp-VERSION-1.2/WEB-INF/classes/dev/gerard/app/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CartoonDataApp-VERSION-1.2/WEB-INF/classes/dev/gerard/app/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CartoonDataApp-VERSION-1.2/WEB-INF/classes/dev/gerard/servlets/UserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CartoonDataApp-VERSION-1.2/WEB-INF/classes/dev/gerard/servlets/UserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CartoonDataApp-VERSION-1.2/WEB-INF/classes/dev/gerard/utils/ConnectionFactoryUtility.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CartoonDataApp-VERSION-1.2/WEB-INF/classes/dev/gerard/utils/ConnectionFactoryUtility.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CartoonDataApp-VERSION-1.2/WEB-INF/classes/dev/gerard/utils/ContextLoadListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CartoonDataApp-VERSION-1.2/WEB-INF/classes/dev/gerard/utils/ContextLoadListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CartoonDataApp-VERSION-1.2/WEB-INF/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/CartoonDataApp-VERSION-1.2/WEB-INF/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/gerard/app/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/gerard/app/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/gerard/servlets/UserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/gerard/servlets/UserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/gerard/utils/ContextLoadListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/gerard/utils/ContextLoadListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CartoonDataApp-VERSION-1.2/WEB-INF/classes/dev/gerard/app/ConnectionApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CartoonDataApp-VERSION-1.2/WEB-INF/classes/dev/gerard/app/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CartoonDataApp-VERSION-1.2/WEB-INF/classes/dev/gerard/servlets/TestServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CartoonDataApp-VERSION-1.2/WEB-INF/classes/dev/gerard/servlets/UserServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CartoonDataApp-VERSION-1.2/WEB-INF/classes/dev/gerard/utils/ConnectionFactoryUtility.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CartoonDataApp-VERSION-1.2/WEB-INF/classes/dev/gerard/utils/ContextLoadListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CartoonDataApp-VERSION-1.2/WEB-INF/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CartoonDataApp-VERSION-1.2/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/CartoonDataApp-VERSION-1.2/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/gerard/app/ConnectionApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/gerard/app/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/gerard/servlets/TestServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/gerard/servlets/UserServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/gerard/utils/ConnectionFactoryUtility.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/gerard/utils/ContextLoadListener.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Images/TheWaterFallMethod.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/connectToDatabase.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Table-Design/Table_design.clip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,11 +85,15 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp" />
       <recent name="C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\.idea" />
+      <recent name="C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="dev.gerard.servlets" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.revature.data.app.ConnectionApp">
     <configuration name="ConnectionApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dev.gerard.app.ConnectionApp" />
       <module name="CartoonDataApp" />
@@ -81,8 +107,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="revature.data.app.ConnectionApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="revature.data.app.ConnectionApp" />
+      <module name="CartoonDataApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="revature.data.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.revature.data.app.ConnectionApp" />
         <item itemvalue="Application.ConnectionApp" />
       </list>
     </recent_temporary>

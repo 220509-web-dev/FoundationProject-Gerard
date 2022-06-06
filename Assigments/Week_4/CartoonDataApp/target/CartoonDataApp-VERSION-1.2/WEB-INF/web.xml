@@ -8,12 +8,21 @@
 
     <servlet>
         <servlet-name>TestServlet</servlet-name>
-        <servlet-class>dev.gerard.servlets.TestServlet</servlet-class>
+        <servlet-class>revature.cartoons.servlets.TestServlet</servlet-class>
     </servlet>
+
+<!--    <servlet>-->
+<!--        <servlet-name>UserServlet</servlet-name>-->
+<!--        <servlet-class>UserServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    -->
 
     <servlet-mapping>
         <servlet-name>TestServlet</servlet-name>
         <url-pattern>/test</url-pattern>
     </servlet-mapping>
-<Listener>dev.gerard.utils.ContextLoadListener</Listener>
+
+    <listener>
+        <listener-class>revature.cartoons.utils.ContextLoadListener</listener-class>
+    </listener>
 </web-app>

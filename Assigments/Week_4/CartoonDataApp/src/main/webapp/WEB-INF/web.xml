@@ -5,15 +5,21 @@
          version="3.1">
 
     <display-name>Cartoon Data App</display-name>
+<welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+</welcome-file-list>
 
     <servlet>
         <servlet-name>TestServlet</servlet-name>
-        <servlet-class>dev.gerard.servlets.TestServlet</servlet-class>
+        <servlet-class>revature.data.servlets.TestServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>TestServlet</servlet-name>
         <url-pattern>/test</url-pattern>
     </servlet-mapping>
-<Listener>dev.gerard.utils.ContextLoadListener</Listener>
+
+    <listener>
+        <listener-class>revature.data.utils.ContextLoadListener</listener-class>
+    </listener>
 </web-app>

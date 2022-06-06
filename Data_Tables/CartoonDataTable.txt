@@ -1,0 +1,42 @@
+
+
+-- establish a 'namespace' for related DB entities to exist within
+create schema cartoon_app;
+
+-- convenience command that will help us to reference the schema created above
+set search_path to cartoon_app; 
+
+
+
+create table users (
+  id            int generated always as identity,
+  first_name    varchar not null,
+  last_name     varchar not null,
+  email         varchar unique not null,
+  username      varchar unique not null check (length(username) >= 4),
+  password varchar not null check (length(password) > 0);
+ 
+
+  constraint users_pk
+  primary key (id)
+);
+
+
+create table categories (
+  id    int generated always as identity primary key,
+  name  varchar unique not null
+);
+
+create table cartoons (
+  id                int generated always as identity primary key,
+  Title    varchar not null,
+  Original_Creator       varchar not null,
+  Rating        int default 1 check (difficulty > 0 and difficulty <= 10),
+  category_id       int,
+
+
+  constraint cartoon_category_fk
+  foreign key (category_id)
+  references categories(id)
+);
+
