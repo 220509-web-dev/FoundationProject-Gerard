@@ -23,7 +23,7 @@ public class UserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)throws ServletException, IOException
     {
         // super.doGet(req,resp);
-        resp.getWriter().write("/users works!");
+        resp.getWriter().write("/users works!\n");
         System.out.println("[LOG] - User Servlet received a post request at" + LocalDateTime.now());
         User someUser = new User(999, "Alice", "Anderson", "aanderson@revature.com","password");
         String responsePayload =mapper.writeValueAsString(someUser);
@@ -35,18 +35,17 @@ public class UserServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
-        super.doPost(request,response);
+        //super.doPost(request,response);
 
          System.out.println("[LOG] - User Servlet received a post request at" + LocalDateTime.now());
 
-         /*try{
-            ObjectMapper mapper1 = new ObjectMapper();
-            User newUser = mapper1.readValue(request.getInputStream(),User.class);
-            System.out.println(newUser);
+         try{
+            User user = mapper.readValue(request.getInputStream(),User.class);
+            System.out.println(user);
         }catch (Exception e){
             e.printStackTrace();
         }
-*/
+
     }
 
 

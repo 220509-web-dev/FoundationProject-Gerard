@@ -1,20 +1,32 @@
 package revature.data.utils;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import revature.data.filters.CustomFilter;
+import revature.data.servlets.CartoonServlet;
 import revature.data.servlets.UserServlet;
 import javax.servlet.*;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
+import java.util.EnumSet;
 
 public class ContextLoadListener implements ServletContextListener {
+        ObjectMapper mapper = new ObjectMapper();
+        UserServlet userservlet = new UserServlet(mapper);
+        CartoonServlet cartoonServlet = new CartoonServlet(mapper);
+
+        CustomFilter customerFilter = new CustomFilter();
+
+
+
 
     @Override
     public void contextInitialized(javax.servlet.ServletContextEvent sce){
-        //ServletContextListener.super.contextInitialized(sce);
+
         System.out.println("Servlet was Instantiated!!");
-        ObjectMapper mapper = new ObjectMapper();
-        UserServlet userservlet = new UserServlet(mapper);
         ServletContext context = sce.getServletContext();
-        context.addServlet("UerServlet",userservlet).addMapping("/users/*");
+        context.addServlet("userServlet",userservlet).addMapping("/users/*");
+        context.addServlet("cartoonServlet",cartoonServlet).addMapping("/cartoons/*");
+        context.addFilter("customFilter", customerFilter)
+                .addMappingForUrlPatterns(EnumSet.of(DispatcherType.REQUEST),true,"/*");
     }
 
     @Override

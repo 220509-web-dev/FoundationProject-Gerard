@@ -1,6 +1,9 @@
-C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\cartoons\servlets\UserServlet.java
-C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\cartoons\utils\ConnectionFactoryUtility.java
-C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\cartoons\utils\ContextLoadListener.java
-C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\cartoons\app\User.java
-C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\cartoons\app\ConnectionApp.java
-C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\cartoons\servlets\TestServlet.java
+C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\app\ConnectionApp.java
+C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\servlets\UserServlet.java
+C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\utils\ConnectionFactoryUtility.java
+C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\utils\ContextLoadListener.java
+C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\app\User.java
+C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\filters\CustomFilter.java
+C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\servlets\CartoonServlet.java
+C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\app\Cartoon.java
+C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\servlets\TestServlet.java
