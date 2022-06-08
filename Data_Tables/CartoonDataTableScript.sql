@@ -35,20 +35,20 @@ insert  into categories values(default, 'Kids');
 insert into categories values(default,'Teens');
 insert into categories values(default, 'Adults');
 
-insert into Cartoons values(default,'Volton','World Event Productions',7,6);
+insert into Cartoons values(default,'Volton','World Event Productions',7,4);
 insert into Cartoons values(default,'Ultimate Spider-Man','Brian Micheal Bendis',8,5);
 insert into Cartoons values(default,'Batman: The Brave And Bold','Bob Kane and others',9,5);
 insert into Cartoons values(default,'Frankenstein jr.','Hanna-Barbera',8,5);
-insert into Cartoons values(default,'ThunderCats','Tobin "Ted" Wolf',10,7);
+insert into Cartoons values(default,'ThunderCats','Tobin "Ted" Wolf',10,6);
 insert into Cartoons values(default,'Avatar: The Last Airbender','Micheal Dante DiMartino, Bryan Konietzko',7,6);
-insert into Cartoons values(default,'Steven Universe','Rebecca Sugar',8,6);
-insert into Cartoons values(default,'RWBY','Monty Oum, Rooster Teeth',9,7);
+insert into Cartoons values(default,'Steven Universe','Rebecca Sugar',8,4);
+insert into Cartoons values(default,'RWBY','Monty Oum, Rooster Teeth',9,4);
 insert into Cartoons values(default,'Hi Hi Puffy AmiYumi','Sam Register',7,6);
 insert into Cartoons values(default,'Samurai Jack','Genndy Tartakovsky',6,6);
 insert into Cartoons values(default,'Powerpuff Girls','Craig McCraken',5,6);
 insert into Cartoons values(default,'She-Ra And The Princesses of Power','Noelle Stevenson',4,6);
-insert into Cartoons values(default,'Winx Club','Rainbow Group',7,7);
-insert into Cartoons values(default,'Castlevania','Warren Ellis',9,7);
+insert into Cartoons values(default,'Winx Club','Rainbow Group',7,5);
+insert into Cartoons values(default,'Castlevania','Warren Ellis',9,6);
 insert into Cartoons values(default,'Teen Titans','Glen Murakami',9,6);
 
 

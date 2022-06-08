@@ -1,5 +1,4 @@
 package revature.data.servlets;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import revature.data.app.Cartoon;
 import revature.data.daos.CartoonDAO;
@@ -14,21 +13,19 @@ public class CartoonServlet extends HttpServlet {
 
     private final ObjectMapper mapper;
     private final CartoonDAO cartoonDAO;
-    public CartoonServlet(ObjectMapper mapper, CartoonDAO cartoonDAO){
+
+    public CartoonServlet(ObjectMapper mapper, CartoonDAO cartoonDAO) {
         this.mapper = mapper;
         this.cartoonDAO = cartoonDAO;
     }
 
 
-
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
-
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         List<Cartoon> cartoons = cartoonDAO.getCartoon();
         String respPayload = mapper.writeValueAsString(cartoons);
         resp.setContentType("application/json");
-
         resp.getWriter().write(respPayload);
     }
 }
