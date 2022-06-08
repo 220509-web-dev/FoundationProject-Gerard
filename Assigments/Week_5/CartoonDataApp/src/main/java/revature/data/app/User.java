@@ -1,8 +1,6 @@
 package revature.data.app;
 import revature.data.utils.ConnectionFactoryUtility;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
 
 public class User {
@@ -119,8 +117,6 @@ public class User {
 
         return user.getId();
     }
-
-
 
 
 }

@@ -5,12 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ca5e552-c717-48a7-8a2c-690c2d0b3c73" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/revature/data/filters/CustomFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/revature/data/daos/CartoonDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/revature/data/daos/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/revature/data/utils/exceptions/DataSourceExceptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/revature/data/utils/exceptions/InvalidRequestException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/revature/data/servlets/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/revature/data/servlets/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/revature/data/app/Cartoon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/revature/data/app/Cartoon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/revature/data/app/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/revature/data/app/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/revature/data/servlets/CartoonServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/revature/data/servlets/CartoonServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/revature/data/utils/ConnectionFactoryUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/revature/data/utils/ConnectionFactoryUtility.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/revature/data/utils/ContextLoadListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/revature/data/utils/ContextLoadListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CartoonDataApp-VERSION-1.2.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/CartoonDataApp-VERSION-1.2.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/revature/data/app/Cartoon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/revature/data/app/Cartoon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/revature/data/app/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/revature/data/app/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/revature/data/utils/ConnectionFactoryUtility.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/revature/data/utils/ConnectionFactoryUtility.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/revature/data/utils/ContextLoadListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/revature/data/utils/ContextLoadListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Data_Tables/CartoonDataTable.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Data_Tables/CartoonDataTable.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

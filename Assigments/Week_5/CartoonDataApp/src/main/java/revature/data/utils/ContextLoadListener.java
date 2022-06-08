@@ -1,6 +1,5 @@
 package revature.data.utils;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import revature.data.daos.UserDAO;
 import revature.data.filters.CustomFilter;
 import revature.data.servlets.CartoonServlet;
 import revature.data.servlets.UserServlet;
@@ -13,9 +12,8 @@ public class ContextLoadListener implements ServletContextListener {
         ObjectMapper mapper = new ObjectMapper();
         UserServlet userservlet = new UserServlet(mapper);
         CartoonServlet cartoonServlet = new CartoonServlet(mapper);
-        CustomFilter customerFilter = new CustomFilter();
 
-        UserDAO userDoa = new UserDAO();
+        CustomFilter customerFilter = new CustomFilter();
 
 
 

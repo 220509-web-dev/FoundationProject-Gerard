@@ -31,7 +31,7 @@ public static ConnectionFactoryUtility getInstance() {
                 } catch (SQLException e) {
                         System.out.println(e.getMessage());
                         System.out.println("Sorry, connection failed..Not sure why?");
-
+                        return null;
                 }
 
                 return conn;

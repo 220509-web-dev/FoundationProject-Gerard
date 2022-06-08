@@ -1,13 +1,4 @@
 
-
--- establish a 'namespace' for related DB entities to exist within
-create schema cartoon_app;
-
--- convenience command that will help us to reference the schema created above
-set search_path to cartoon_app; 
-
-
-
 create table users (
   id            int generated always as identity,
   first_name    varchar not null,
@@ -39,7 +30,6 @@ create table cartoons (
   foreign key (category_id)
   references categories(id)
 );
-
 
 insert  into categories values(default, 'Kids');
 insert into categories values(default,'Teens');
