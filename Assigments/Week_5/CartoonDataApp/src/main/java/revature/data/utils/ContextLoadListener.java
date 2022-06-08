@@ -14,12 +14,12 @@ import java.util.EnumSet;
 
 public class ContextLoadListener implements ServletContextListener {
     ObjectMapper mapper = new ObjectMapper();
-    UserServlet userservlet = new UserServlet(mapper);
-    CartoonDAO cartoonDAO = new CartoonDAO();
-
     UserDAO userDoa = new UserDAO();
-    CartoonServlet cartoonServlet = new CartoonServlet(mapper, cartoonDAO);
+    CartoonDAO cartoonDAO = new CartoonDAO();
     CustomFilter customerFilter = new CustomFilter();
+    UserServlet userservlet = new UserServlet(mapper);
+    CartoonServlet cartoonServlet = new CartoonServlet(mapper, cartoonDAO);
+
 
 
     @Override

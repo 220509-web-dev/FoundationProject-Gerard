@@ -19,7 +19,7 @@ public class CartoonDAO {
         try (Connection connect = ConnectionFactoryUtility.getInstance().getConnection()) {
 
 
-            String sql = "SELECT (*) FROM Cartoons";
+            String sql = "SELECT * FROM Cartoons";
             PreparedStatement pstmt = connect.prepareStatement(sql);
 
             ResultSet result = pstmt.executeQuery();
