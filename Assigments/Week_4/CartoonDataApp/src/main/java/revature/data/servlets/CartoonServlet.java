@@ -13,8 +13,10 @@ import java.util.List;
 public class CartoonServlet extends HttpServlet {
 
     private final ObjectMapper mapper;
-    public CartoonServlet(ObjectMapper mapper){
+    private final CartoonDAO cartoonDAO;
+    public CartoonServlet(ObjectMapper mapper, CartoonDAO cartoonDAO){
         this.mapper = mapper;
+        this.cartoonDAO = cartoonDAO;
     }
 
 
@@ -23,10 +25,10 @@ public class CartoonServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
 
 
-       /* List<Cartoon> cartoons = CartoonDAO.
+        List<Cartoon> cartoons = cartoonDAO.getCartoon();
         String respPayload = mapper.writeValueAsString(cartoons);
         resp.setContentType("application/json");
 
-        resp.getWriter().write(respPayload);*/
+        resp.getWriter().write(respPayload);
     }
 }

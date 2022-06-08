@@ -10,12 +10,13 @@ import java.util.List;
 
 public class CartoonDAO {
 
-    public List<Cartoon> getCartoon() throws SQLException {
+    public List<Cartoon> getCartoon() {
 
         List<Cartoon> cartoons = new ArrayList<>();
-        if (ConnectionFactoryUtility.getInstance() != null) {
 
-            Connection connect = ConnectionFactoryUtility.getConnection();
+        try ( Connection connect = ConnectionFactoryUtility.getInstance().getConnection()) {
+
+
             String sql = "Select * From cartoons";
             PreparedStatement pstmt = connect.prepareStatement(sql);
 
@@ -32,8 +33,10 @@ public class CartoonDAO {
 
             }
 
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
 
-            return cartoons;
+        return cartoons;
     }
 }
