@@ -8,9 +8,6 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 
 
-
-
-
 public class UserServlet extends HttpServlet {
 
     private final ObjectMapper mapper;

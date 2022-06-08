@@ -1,9 +1,13 @@
-C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\app\ConnectionApp.java
-C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\servlets\UserServlet.java
+C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\utils\exceptions\InvalidRequestException.java
+C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\daos\UserDAO.java
 C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\utils\ConnectionFactoryUtility.java
-C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\utils\ContextLoadListener.java
 C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\app\User.java
-C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\filters\CustomFilter.java
+C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\daos\CartoonDAO.java
 C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\servlets\CartoonServlet.java
 C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\app\Cartoon.java
+C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\app\ConnectionApp.java
+C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\utils\exceptions\DataSourceExceptions.java
+C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\servlets\UserServlet.java
+C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\utils\ContextLoadListener.java
+C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\filters\CustomFilter.java
 C:\Users\Gerard E. Paul\Desktop\Revature\FoundationProject-Gerard\Assigments\Week_4\CartoonDataApp\src\main\java\revature\data\servlets\TestServlet.java
