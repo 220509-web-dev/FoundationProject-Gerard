@@ -1,18 +1,25 @@
 package revature.data.servlets;
+
 import revature.data.app.User;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import revature.data.utils.ConnectionFactoryUtility;
 import revature.data.utils.Interfaces.User_Interface;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 
-
 public class UserServlet extends HttpServlet implements User_Interface {
-
+    HttpServletResponse response = null;
     private final ObjectMapper mapper;
 
     public UserServlet(ObjectMapper mapper) {
@@ -24,11 +31,19 @@ public class UserServlet extends HttpServlet implements User_Interface {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // super.doGet(req,resp);
         resp.getWriter().write("/users works!\n");
-        System.out.println("[LOG] - User Servlet received a post request at" + LocalDateTime.now());
-        User someUser = new User(999, "Alice", "Anderson", "aanderson@revature.com", "password");
-        String responsePayload = mapper.writeValueAsString(someUser);
-        resp.setContentType("application/json");
-        resp.getWriter().write(responsePayload);
+
+
+        String responsePayload = "";
+        List<User> users = getAllUsers();
+
+        for (int i = 0; i < users.toArray().length; ++i) {
+
+            responsePayload = mapper.writeValueAsString(users.get(i));
+            resp.setContentType("application/json");
+            resp.getWriter().write(responsePayload);
+
+        }
+
 
     }
 
@@ -60,9 +75,7 @@ public class UserServlet extends HttpServlet implements User_Interface {
 
     @Override
     public User createUser(User user) {
-        String newuser= user.toString();
-        System.out.println("[LOG] - User Servlet received a post request at" + LocalDateTime.now());
-        User someUser = new User(999, "Alice", "Anderson", "aanderson@revature.com", "password");
+
         return null;
     }
 
@@ -78,11 +91,33 @@ public class UserServlet extends HttpServlet implements User_Interface {
 
     @Override
     public List<User> getAllUsers() {
-        return null;
+
+        List<User> users = new ArrayList<>();
+        System.out.println("[LOG] - User Servlet received a post request at" + LocalDateTime.now());
+        try (Connection conn = ConnectionFactoryUtility.getInstance().getConnection()) {
+            String sql = "Select * From users";
+
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+
+            ResultSet result = pstmt.executeQuery();
+
+            while (result.next()) {
+                User user = new User();
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return users;
+
+
     }
 
     @Override
     public void createMultipleUsers(List<User> users) {
 
     }
+
+
 }
+

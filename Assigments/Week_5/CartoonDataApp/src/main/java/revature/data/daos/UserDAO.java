@@ -56,7 +56,7 @@ public class UserDAO implements User_Interface {
         List<User> users = new ArrayList<>();
 
         try (Connection conn = ConnectionFactoryUtility.getInstance().getConnection()) {
-            String sql = "Select * From user";
+            String sql = "Select * From users";
 
             PreparedStatement pstmt = conn.prepareStatement(sql);
 

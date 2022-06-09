@@ -6,7 +6,6 @@ import revature.data.daos.UserDAO;
 import revature.data.filters.CustomFilter;
 import revature.data.servlets.CartoonServlet;
 import revature.data.servlets.UserServlet;
-
 import javax.servlet.*;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -19,7 +18,6 @@ public class ContextLoadListener implements ServletContextListener {
     CustomFilter customerFilter = new CustomFilter();
     UserServlet userservlet = new UserServlet(mapper);
     CartoonServlet cartoonServlet = new CartoonServlet(mapper, cartoonDAO);
-
 
 
     @Override
