@@ -12,11 +12,14 @@ import javax.servlet.ServletContextListener;
 import java.util.EnumSet;
 
 public class ContextLoadListener implements ServletContextListener {
+
+
     ObjectMapper mapper = new ObjectMapper();
-    UserDAO userDoa = new UserDAO();
+    UserDAO userDAO = new UserDAO();
     CartoonDAO cartoonDAO = new CartoonDAO();
+
     CustomFilter customerFilter = new CustomFilter();
-    UserServlet userservlet = new UserServlet(mapper);
+    UserServlet userservlet = new UserServlet(mapper, userDAO);
     CartoonServlet cartoonServlet = new CartoonServlet(mapper, cartoonDAO);
 
 
@@ -35,6 +38,5 @@ public class ContextLoadListener implements ServletContextListener {
     public void contextDestroyed(ServletContextEvent sce) {
         System.out.println("Servlet was destroyed!!");
     }
-
 
 }

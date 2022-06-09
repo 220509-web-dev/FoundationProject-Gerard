@@ -2,6 +2,7 @@ package revature.data.servlets;
 
 import revature.data.app.User;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import revature.data.daos.UserDAO;
 import revature.data.utils.ConnectionFactoryUtility;
 import revature.data.utils.Interfaces.User_Interface;
 
@@ -22,8 +23,10 @@ public class UserServlet extends HttpServlet implements User_Interface {
     HttpServletResponse response = null;
     private final ObjectMapper mapper;
 
-    public UserServlet(ObjectMapper mapper) {
+    private final UserDAO userDAO;
+    public UserServlet(ObjectMapper mapper,  UserDAO userDAO) {
         this.mapper = mapper;
+        this.userDAO = userDAO;
     }
 
 
@@ -38,7 +41,7 @@ public class UserServlet extends HttpServlet implements User_Interface {
 
         for (int i = 0; i < users.toArray().length; ++i) {
 
-            responsePayload = mapper.writeValueAsString(users.get(i));
+            responsePayload = mapper.writeValueAsString(users.get(i).getFirstName());
             resp.setContentType("application/json");
             resp.getWriter().write(responsePayload);
 
