@@ -1,38 +1,77 @@
 package revature.data.daos;
 
 import javafx.beans.binding.ObjectExpression;
+import revature.data.app.Cartoon;
 import revature.data.app.User;
 import revature.data.utils.ConnectionFactoryUtility;
-
+import revature.data.utils.Interfaces.User_Interface;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
 
-public class UserDAO {
+public class UserDAO implements User_Interface {
 
+    public User createUser(User user){
+        return new User();
+    }
+    public void createMultipleUsers(List<User> users) {
 
+        String SQL = "INSERT INTO users(first_name,last_name,email,username,password)" + "VALUES(?,?)";
 
-    public void getUsers(ResultSet rs) throws SQLException {
-        if (ConnectionFactoryUtility.getInstance() != null) {
+        try (Connection conn = ConnectionFactoryUtility.getInstance().getConnection();
 
-            Connection connect = ConnectionFactoryUtility.getConnection();
-            String sql = "Select * From user";
-            PreparedStatement pstmt = connect.prepareStatement(sql);
+            PreparedStatement statement = conn.prepareStatement(SQL);){
+            int count = 0;
+            for (User user1 : users) {
+                statement.setString(1, user1.getFirstName());
+                statement.setString(2, user1.getLastName());
 
+                statement.addBatch();
+                count++;
 
-            while (rs.next()) {
-                User user = new User();
-
-
+                if (count % 50 == 0 || count == users.size()) {
+                statement.executeBatch();
+                }
             }
+
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
         }
     }
 
-    public HashMap<String, Object> AddUsers(){
-        User someuser = new User();
-        return  null;
+    public User getUserById(int id) {
+        return null;
     }
+
+
+    public User getUserByUsername(String username) {
+        return null;
+    }
+
+    public List<User> getAllUsers() {
+        List<User> users = new ArrayList<>();
+
+        try (Connection conn = ConnectionFactoryUtility.getInstance().getConnection()) {
+            String sql = "Select * From user";
+
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+
+            ResultSet result = pstmt.executeQuery();
+
+            while (result.next()) {
+                User user = new User();
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return users;
+
+
+    }
+
 }

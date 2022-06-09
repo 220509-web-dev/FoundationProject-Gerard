@@ -1,8 +1,6 @@
 package revature.data.daos;
-
 import revature.data.app.Cartoon;
 import revature.data.utils.ConnectionFactoryUtility;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,6 +8,8 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 import java.sql.*;
+
+
 public class CartoonDAO {
 
     public List<Cartoon> getCartoon() {

@@ -10,16 +10,16 @@ public class ConnectionFactoryUtility {
         private static final String password = "bones";
 
 
-        private static ConnectionFactoryUtility connection;
+        private static ConnectionFactoryUtility instance;
         private ConnectionFactoryUtility(){super();}
 
 
 
 public static ConnectionFactoryUtility getInstance() {
-                if(connection == null){
-                        connection= new ConnectionFactoryUtility();
+                if(instance == null){
+                        instance = new ConnectionFactoryUtility();
                 }
-                return connection;
+                return instance;
 
 }
     static {

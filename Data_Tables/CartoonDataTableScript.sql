@@ -51,7 +51,11 @@ insert into Cartoons values(default,'Winx Club','Rainbow Group',7,5);
 insert into Cartoons values(default,'Castlevania','Warren Ellis',9,6);
 insert into Cartoons values(default,'Teen Titans','Glen Murakami',9,6);
 
-
+insert into users values (default,'Lenord','Williams','lionwilliams@hotmail.com','lionsrule1','bookgeek');
+insert into users values (default,'Trevor','Nool','noobie@revature.com','trevorrule','clevertrevor');
+insert into users values (default,'Gail','Nool','gailnool@revature.com','gailorider','pailgail');
+insert into users values (default,'Alison','Calise','alison@revature.com','alisongive','nicegirl');
 
 select * from Cartoons;
 select * from categories;
+select  * from users;
