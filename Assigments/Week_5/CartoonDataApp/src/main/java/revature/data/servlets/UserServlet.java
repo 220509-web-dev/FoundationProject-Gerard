@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class UserServlet extends HttpServlet implements User_Interface {
+public class UserServlet extends HttpServlet{
     HttpServletResponse response = null;
     private final ObjectMapper mapper;
 
@@ -37,16 +37,16 @@ public class UserServlet extends HttpServlet implements User_Interface {
 
 
         String responsePayload = "";
-        List<User> users = getAllUsers();
+        List<User> users = userDAO.getAllUsers();
 
         for (int i = 0; i < users.toArray().length; ++i) {
-
-            responsePayload = mapper.writeValueAsString(users.get(i).getFirstName());
-            resp.setContentType("application/json");
-            resp.getWriter().write(responsePayload);
+            responsePayload = mapper.writeValueAsString(users.get(i).toString());
 
         }
 
+
+        resp.setContentType("application/json");
+        resp.getWriter().write(responsePayload);
 
     }
 
@@ -76,23 +76,23 @@ public class UserServlet extends HttpServlet implements User_Interface {
         super.doDelete(request, response);
     }
 
-    @Override
+
     public User createUser(User user) {
 
         return null;
     }
 
-    @Override
+
     public User getUserById(int id) {
         return null;
     }
 
-    @Override
+
     public User getUserByUsername(String username) {
         return null;
     }
 
-    @Override
+
     public List<User> getAllUsers() {
 
         List<User> users = new ArrayList<>();
@@ -106,6 +106,12 @@ public class UserServlet extends HttpServlet implements User_Interface {
 
             while (result.next()) {
                 User user = new User();
+                user.setId(result.getInt("id"));
+                user.setFirstName(result.getString("first_name"));
+                user.setLastName(result.getString("last_name"));
+                user.setEmail(result.getString("email"));
+                users.add(user);
+
             }
 
         } catch (SQLException e) {
@@ -116,7 +122,7 @@ public class UserServlet extends HttpServlet implements User_Interface {
 
     }
 
-    @Override
+
     public void createMultipleUsers(List<User> users) {
 
     }

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import revature.data.daos.CartoonDAO;
 import revature.data.daos.UserDAO;
 import revature.data.filters.CustomFilter;
+import revature.data.servlets.AuthServlet;
 import revature.data.servlets.CartoonServlet;
 import revature.data.servlets.UserServlet;
 import javax.servlet.*;
@@ -21,6 +22,7 @@ public class ContextLoadListener implements ServletContextListener {
     CustomFilter customerFilter = new CustomFilter();
     UserServlet userservlet = new UserServlet(mapper, userDAO);
     CartoonServlet cartoonServlet = new CartoonServlet(mapper, cartoonDAO);
+    AuthServlet authServlet = new AuthServlet();
 
 
     @Override
@@ -28,6 +30,7 @@ public class ContextLoadListener implements ServletContextListener {
 
         System.out.println("Servlet was Instantiated!!");
         ServletContext context = sce.getServletContext();
+        context.addServlet("authenticationServlet",authServlet).addMapping("/authentication/*");
         context.addServlet("userServlet", userservlet).addMapping("/users/*");
         context.addServlet("cartoonServlet", cartoonServlet).addMapping("/cartoons/*");
         context.addFilter("customFilter", customerFilter)

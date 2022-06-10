@@ -56,7 +56,7 @@ public class UserDAO implements User_Interface {
         List<User> users = new ArrayList<>();
 
         try (Connection conn = ConnectionFactoryUtility.getInstance().getConnection()) {
-            String sql = "Select * From users";
+            String sql = "SELECT * FROM Cartoons.users";
 
             PreparedStatement pstmt = conn.prepareStatement(sql);
 
@@ -64,6 +64,12 @@ public class UserDAO implements User_Interface {
 
             while (result.next()) {
                 User user = new User();
+                user.setId(result.getInt("id"));
+                user.setFirstName(result.getString("first_name"));
+                user.setLastName(result.getString("last_name"));
+                user.setEmail(result.getString("email"));
+                users.add(user);
+
             }
 
         } catch (SQLException e) {

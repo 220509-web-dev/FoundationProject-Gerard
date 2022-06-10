@@ -16,7 +16,7 @@ public class User {
     public User() {
     }
 
-    public static void setId(int id) {
+    public void setId(int id) {
         User.id = id;
     }
 
