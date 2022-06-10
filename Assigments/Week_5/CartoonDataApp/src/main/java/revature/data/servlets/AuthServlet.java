@@ -31,7 +31,7 @@ public class AuthServlet extends HttpServlet {
         out.println("</table>");
         out.println("</div>");
         out.println("<div>");
-        out.println("<a href=http://localhost:8080/cartoon-data-app/cartooons><h1>Cartoon_Database.</h1> </a>");
+        out.println("<a href=http://localhost:8080/cartoon-data-app/cartoons><h1>Cartoon_Database.</h1> </a>");
         out.println("</div>");
         out.println("</body>");
         out.println("</html>");

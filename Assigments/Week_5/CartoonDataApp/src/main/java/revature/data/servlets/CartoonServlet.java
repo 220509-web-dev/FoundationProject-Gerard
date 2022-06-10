@@ -22,10 +22,30 @@ public class CartoonServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setContentType("text/html");
+        java.io.PrintWriter out = resp.getWriter();
+        out.println("<html>");
+        out.println("<title>The Database</title>");
+        out.println("<head>");
+        out.println("<h1>The Database</h1>");
+        out.println("</head>");
+        out.println("<body>");
 
+        out.println("<div>");
+        out.println("<table border= 1>");
+        out.println("<tr>");
+        out.println("<h2>Welcome to the Cartoon Database</h>");
+
+        out.println("</tr>");
+        out.println("</table>");
+        out.println("</div>");
+        out.println("<div>");
+        out.println("</div>");
+        out.println("</body>");
+        out.println("</html>");
         List<Cartoon> cartoons = cartoonDAO.getCartoon();
         String respPayload = mapper.writeValueAsString(cartoons);
-        resp.setContentType("application/json");
+        //resp.setContentType("application/json");
         resp.getWriter().write(respPayload);
     }
 }
