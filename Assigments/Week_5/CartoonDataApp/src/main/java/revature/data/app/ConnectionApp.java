@@ -9,7 +9,7 @@ public class ConnectionApp {
     public static void main(String[] args) {
 
         //System.out.println(ConnectionFactoryUtility.getConnection());
-        ConnectionFactoryUtility.getConnection();
+       // ConnectionFactoryUtility.getConnection();
 
       /*  User_Interface user_interface = new UserDAO();
         System.out.println(user_interface.getAllUsers().size());*/
