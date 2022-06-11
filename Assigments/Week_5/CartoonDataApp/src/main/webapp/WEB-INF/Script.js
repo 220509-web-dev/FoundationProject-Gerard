@@ -14,7 +14,7 @@ function login() {
     errorContainer.setAttribute("hidden", true);
   }
 
-  fetch("/Cartoon-Data-App/auth", {
+  fetch("/cartoon-data-app/authentication", {
     method: "POST",
     body: JSON.stringify({ username, password }),
   }).then((resp) => {
