@@ -24,7 +24,10 @@ public class AuthServlet extends HttpServlet {
 
         RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/WEB-INF/index.html");
         dispatcher.include(request, response);
-/*        if (param == null) {
+
+        String param = request.getParameter("cartoon-web-app/WEB-INF/index.html");
+
+        if (param == null) {
             throw new ServletException("Missing parameter in Authentication.");
         } else if (param.equals("/index")) {
             dispatcher = request.getRequestDispatcher("/WEB-INF/index.html");
@@ -39,32 +42,35 @@ public class AuthServlet extends HttpServlet {
         /*request.getRequestURI().replace("/cartoon-data-app/authentication", "/cartoon-data-app/cartoons");
         request.getServletContext().getRequestDispatcher("/WEB-INF/index.html");*/
 
+        }
+
     }
-
-
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, java.io.IOException {
 
         ObjectMapper objectMapper = new ObjectMapper();
 
-        String line;
-        String param = request.getParameter("cartoon-web-app");
-        String username = "Tom";
-        String password = "Tom";
+        String Dline;
+        String username = " ";
+        String password = " ";
+
+
         BufferedReader reader = request.getReader();
         RequestDispatcher dispatcher = null;
 
         StringBuilder stringBuilder = new StringBuilder();
 
-        while ((line = reader.readLine()) != null) {
-            stringBuilder.append(line);
+        while ((Dline = reader.readLine()) != null) {
+            stringBuilder.append(Dline);
         }
         String body = stringBuilder.toString();
         System.out.println("body: " + body);
- /*       User userCredentials = objectMapper.readValue(body, User.class);*/
-       // String uri = request.getRequestURI().replace("/WEB-INF/index.html", "");
-        response.getWriter().write(objectMapper.writeValueAsString(username));
-        response.getWriter().write(objectMapper.writeValueAsString(password));
 
+
+        /*User userCredentials = objectMapper.readValue(body, User.class);*/
+
+        response.getWriter().write(objectMapper.writeValueAsString(username));
+
+        response.getWriter().write(objectMapper.writeValueAsString(password));
 
 
     }
