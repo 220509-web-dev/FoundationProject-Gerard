@@ -32,7 +32,7 @@ public class ContextLoadListener implements ServletContextListener {
 
         System.out.println("Servlet was Instantiated!!");
         ServletContext context = sce.getServletContext();
-        context.addServlet("copyrightServlet",copyrightServlet).addMapping("/copyright/*");
+        context.addServlet("copyrightServlet",authServlet).addMapping("/copyright/*");
         context.addServlet("authenticationServlet",authServlet).addMapping("/authentication/*");
         context.addServlet("userServlet", userservlet).addMapping("/users/*");
         context.addServlet("cartoonServlet", cartoonServlet).addMapping("/cartoons/*");

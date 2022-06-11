@@ -1,5 +1,5 @@
 window.onload = function () {
-  document.getElementById("login").addEventListener("click", login);
+  document.getElementById("button").addEventListener("click", login);
 
   document.getElementById("password").addEventListener("keyup", function (e) {
     if (e.key === "Enter") login();
@@ -10,11 +10,11 @@ function login() {
   let password = document.getElementById("password").value;
   let errorContainer = document.getElementById("error-message");
 
-  if (username && password) {
+  /*if (username && password) {
     errorContainer.setAttribute("hidden", true);
   }
-
-  fetch("/cartoon-data-app/authentication", {
+*/
+  fetch("http://localhost:8080/cartoon-data-app/authentication", {
     method: "POST",
     body: JSON.stringify({ username, password }),
   }).then((resp) => {

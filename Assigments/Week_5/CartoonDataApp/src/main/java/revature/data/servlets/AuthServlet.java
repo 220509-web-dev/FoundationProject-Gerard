@@ -13,11 +13,27 @@ public class AuthServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, java.io.IOException {
 
+
         RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/WEB-INF/index.html");
         dispatcher.include(request, response);
 
-
+  /*      RequestDispatcher dispatcher = null;
+        String param = request.getParameter("cartoon-web-app");
+        if (param == null) {
+            throw new ServletException("Missing parameter in Authentication.");
+        } else if (param.equals("/index")) {
+            dispatcher = request.getRequestDispatcher("/WEB-INF/index.html");
+        } else if (param.equals("/cartoons")){
+            dispatcher = request.getRequestDispatcher("/cartoons");
+        }
+        else{
+            throw new ServletException("Improper parameter passed.");
+        }
+        if(dispatcher != null){
+            dispatcher.include(request,response);*/
     }
+
+
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, java.io.IOException {
 
