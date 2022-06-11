@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class UserServlet extends HttpServlet{
+public class UserServlet extends HttpServlet implements User_Interface{
     HttpServletResponse response = null;
     private final ObjectMapper mapper;
 
@@ -33,23 +33,17 @@ public class UserServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // super.doGet(req,resp);
-        resp.getWriter().write("/users works!\n");
-
+        /// resp.getWriter().write("/users works!\n");
 
         String responsePayload = "";
-        List<User> users = userDAO.getAllUsers();
-
-        for (int i = 0; i < users.toArray().length; ++i) {
-            responsePayload = mapper.writeValueAsString(users.get(i).toString());
-
-        }
-
-
+        List<User> users = getAllUsers();
+        responsePayload = mapper.writeValueAsString(users);
         resp.setContentType("application/json");
         resp.getWriter().write(responsePayload);
+        System.out.println(users.size());
 
     }
-
+/*
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //super.doPost(request,response);
@@ -64,7 +58,7 @@ public class UserServlet extends HttpServlet{
 
         }
 
-    }
+    }*/
 
     @Override
     protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -92,13 +86,13 @@ public class UserServlet extends HttpServlet{
         return null;
     }
 
-
+@Override
     public List<User> getAllUsers() {
 
         List<User> users = new ArrayList<>();
         System.out.println("[LOG] - User Servlet received a post request at" + LocalDateTime.now());
         try (Connection conn = ConnectionFactoryUtility.getInstance().getConnection()) {
-            String sql = "Select * From users";
+            String sql = "Select * From cartoons.users";
 
             PreparedStatement pstmt = conn.prepareStatement(sql);
 

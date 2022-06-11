@@ -1,5 +1,11 @@
 
-create table users (
+drop schema if exists cartoons;
+create schema cartoons;
+
+
+
+
+create table cartoons.users (
   id            int generated always as identity,
   first_name    varchar not null,
   last_name     varchar not null,
@@ -11,6 +17,11 @@ create table users (
   constraint users_pk
   primary key (id)
 );
+
+insert into cartoons.users values(default, 'Tester', 'Mctest', 'email@email.email','username1','password1');
+
+select * from cartoons.users;
+
 
 
 create table categories (
@@ -56,6 +67,9 @@ insert into users values (default,'Trevor','Nool','noobie@revature.com','trevorr
 insert into users values (default,'Gail','Nool','gailnool@revature.com','gailorider','pailgail');
 insert into users values (default,'Alison','Calise','alison@revature.com','alisongive','nicegirl');
 
-select * from Cartoons;
+select * from "Cartoons".users u ;
+select * from "Cartoons";
 select * from categories;
 select  * from users;
+select * from cartoons.users;
+drop 
